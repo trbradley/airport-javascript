@@ -39,4 +39,13 @@ describe('Airport', function () {
       expect(airport.stored_planes).toContain(plane);
     });
   });
+
+  describe('#takeOffPlane', function () {
+
+    it('causes plane to leave the airport', function () {
+      airport.takeOffPlane(plane);
+      expect(airport.stored_planes).not.toContain(plane);
+    });
+  });
+
 });
