@@ -1,3 +1,5 @@
+'use strict';
+
 describe('Airport', function () {
 
   var airport, plane;

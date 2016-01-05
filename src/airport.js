@@ -1,3 +1,5 @@
+'use strict';
+
 function Airport (capacity, stored_planes) {
   this.stored_planes = stored_planes || [];
   this.capacity = capacity || Airport.DEFAULTCAPACITY;

@@ -1,3 +1,5 @@
+'use strict';
+
 function Weather() {}
 
 Weather.prototype._numberGenerator = function () {

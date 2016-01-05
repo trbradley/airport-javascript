@@ -1,3 +1,5 @@
+'use strict';
+
 function Plane(isAirborne) {
   this.isAirborne = isAirborne || true;
 }
