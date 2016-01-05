@@ -53,5 +53,4 @@ describe('Airport', function () {
       expect(airport.stored_planes).not.toContain(plane);
     });
   });
-
 });

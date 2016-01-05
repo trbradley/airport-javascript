@@ -7,7 +7,9 @@ function Plane(isAirborne) {
 //   this.name = 'UserException';
 // }
 
-Plane.prototype.land = function (airport) {
+Plane.prototype.land = function (airport, weather) {
+  weather = weather || new Weather();
+  if (weather.isStormy === true) throw new TypeError ('Weather is stormy');
   if (airport.isFull === true) throw new TypeError ('Airport Full');
   if (this.isAirborne === false) throw new TypeError ('Plane already landed');
   this.isAirborne = false;
@@ -15,7 +17,9 @@ Plane.prototype.land = function (airport) {
   return this;
 };
 
-Plane.prototype.takeOff = function (airport) {
+Plane.prototype.takeOff = function (airport, weather) {
+  weather = weather || new Weather();
+  if (weather.isStormy === true) throw new TypeError ('Weather is stormy');
   if (this.isAirborne === true) throw new TypeError ('Plane is already airborne');
   this.isAirborne = true;
   airport.takeOffPlane(this);
