@@ -4,3 +4,10 @@ function Airport (stored_planes, capacity) {
 }
 
 Object.defineProperty(Airport, 'DEFAULTCAPACITY', {value: 20});
+
+Airport.prototype.isFull = function () {
+  if (this.stored_planes.length === this.capacity) {
+    return true;
+  }
+  return false;
+};
