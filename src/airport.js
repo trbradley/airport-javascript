@@ -12,6 +12,6 @@ Airport.prototype.isFull = function () {
   return false;
 };
 
-// Airport.prototype.landplane = function (plane) {
-//   this.stored_planes.push(plane)
-// };
+Airport.prototype.landplane = function (plane) {
+  this.stored_planes.push(plane);
+};

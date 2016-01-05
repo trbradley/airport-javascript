@@ -11,7 +11,6 @@ describe('Airport', function () {
     it('is an empty array by default', function () {
       expect(airport.stored_planes).toEqual([]);
     });
-
   });
 
   describe('#capacity', function () {
@@ -19,7 +18,6 @@ describe('Airport', function () {
     it('has a default value', function () {
       expect(airport.capacity).toEqual(Airport.DEFAULTCAPACITY);
     });
-
   });
 
   describe('#isFull', function () {
@@ -32,7 +30,13 @@ describe('Airport', function () {
     it('returns false when airport is not full', function () {
       expect(airport.isFull()).toBe(false);
     });
-
   });
 
+  describe('#landplane', function () {
+
+    it('stores the plane in the airport', function () {
+      airport.landplane(plane);
+      expect(airport.stored_planes).toContain(plane);
+    });
+  });
 });
