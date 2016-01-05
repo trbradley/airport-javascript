@@ -5,4 +5,5 @@ function Plane(isAirborne) {
 Plane.prototype.land = function (airport) {
   this.isAirborne = false;
   airport.landplane(this);
+  return this
 };
