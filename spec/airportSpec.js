@@ -18,12 +18,18 @@ describe('Airport', function () {
     it('has a default value', function () {
       expect(airport.capacity).toEqual(Airport.DEFAULTCAPACITY);
     });
+
+    it('can be overridden on exercise', function () {
+      var random_capacity = 100;
+      airport = new Airport(random_capacity);
+      expect(airport.capacity).toEqual(random_capacity);
+    });
   });
 
   describe('#isFull', function () {
 
     it('returns true when airport full', function () {
-      airport = new Airport([plane], 1);
+      airport = new Airport(1, [plane]);
       expect(airport.isFull()).toBe(true);
     });
 
